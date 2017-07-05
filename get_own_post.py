@@ -18,4 +18,4 @@ def get_own_post():
     else:
         print 'Status code other than 200 received!'
 
-get_own_post()
+#get_own_post()
