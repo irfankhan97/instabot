@@ -6,14 +6,14 @@ username = "radhika12344"
 
 def like_user_post(insta_username):
     media_id = get_user_post(insta_username)
-    request_url = (BASE_URL + "/media/&s/comments") % (media_id)
-    message = raw_input("enter ur comment")
+    request_url = (BASE_URL + "media/"+media_id+"/comments")
+    message = raw_input("Enter ur comment....\n")
     payload = {"access_token" : APP_ACCESS_TOKEN, "message":message}
     post_a_comment = requests.post(request_url,payload).json()
-    if post_a_comment['meta']['code']== 200:
+    if post_a_comment['meta']['code'] == 200:
         print("Post comment successfully")
     else :
-        print('comment has not posted')
+        print('not successful')
 
 like_user_post(username)
 
