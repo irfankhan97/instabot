@@ -4,6 +4,9 @@ from get_user_post import get_user_post
 from get_own_post import get_own_post
 from get_user_info import get_user_info
 
+
+print('.....................Welcome ....TO......InstaBot..............')
+print("\n...................MAke...... Your... Life.. Easy............")
 show_menu = True
 while show_menu:
     menu_choices = "What do you want to do? \n 1. Like A Post \n 2. Comment on a post \n 3. Download Own Post \n 4. Download Friend's post \n 5. Get Friend Info. \n 6. Close Application \n"
