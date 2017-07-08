@@ -3,13 +3,14 @@ from comment_a_Post import comment_user_post
 from get_user_post import get_user_post
 from get_own_post import get_own_post
 from get_user_info import get_user_info
+import get_comment_post
 
 
 show_menu = True
 while show_menu:
     print('.....................Welcome ....TO......InstaBot..............')
     print("\n...................MAke...... Your... Life.. Easy............\n\n")
-    menu_choices = "What do you want to do? \n 1. Like A Post \n 2. Comment on a post \n 3. Download Own Post \n 4. Download Friend's post \n 5. Get Friend Info. \n 6. Close Application \n"
+    menu_choices = "What do you want to do? \n 1. Like A Post \n 2. Comment on a post \n 3. Download Own Post \n 4. Download Friend's post \n 5. Get Friend Info. \n 6. Get Friend's comments\n\n"
     menu_choice = input(menu_choices)
 
 
@@ -47,6 +48,12 @@ while show_menu:
             insta_username = raw_input("Enter Username.........\n")
             print("Wait getting information.....")
             get_user_info(insta_username)
+            print("\n")
+            print("\n")
+        elif menu_choice == 6:
+            insta_username = raw_input("Enter Username.........\n")
+            print("Wait getting information.....")
+            get_comment_post.comment_user_post(insta_username)
             print("\n")
             print("\n")
         else:

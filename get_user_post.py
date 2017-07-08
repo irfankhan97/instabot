@@ -10,9 +10,9 @@ def get_user_post(insta_username):
         print 'User does not exist!'
         exit()
     request_url = (BASE_URL + 'users/%s/media/recent/?access_token=%s') % (user_id, APP_ACCESS_TOKEN)
-    print 'GET request url : %s' % (request_url)
+    #print 'GET request url : %s' % (request_url)
     user_media = requests.get(request_url).json()
-    print json.dumps(user_media, indent=4, sort_keys=True)
+   # print json.dumps(user_media, indent=4, sort_keys=True)
   #  print user_media['data'][0]['comments'][0]
 
     if user_media['meta']['code'] == 200:

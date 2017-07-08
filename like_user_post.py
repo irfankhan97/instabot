@@ -5,7 +5,6 @@ from get_user_post import get_user_post
 
 def like_user_post(insta_username):
     media_id = get_user_post(insta_username)
-    print(media_id)
     request_url = (BASE_URL + "media/"+media_id+"/likes")
     payload = {"access_token" : APP_ACCESS_TOKEN}
     post_a_like = requests.post(request_url,payload).json()

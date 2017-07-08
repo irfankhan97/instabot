@@ -9,9 +9,6 @@ def comment_user_post(insta_username):
     # payload = {"access_token" : APP_ACCESS_TOKEN, "message":message}
     request_url = (BASE_URL + "media/" + media_id + "/comments?access_token=" + APP_ACCESS_TOKEN)
     get_a_comment = requests.get(request_url).json()
-    print json.dumps(get_a_comment, indent=4, sort_keys=True)
-    print 'GET request url : %s' % (request_url)
-    print(get_a_comment['meta']['code'])
     if get_a_comment['meta']['code'] == 200:
         print(get_a_comment['data'][0]['text'])
     else:
