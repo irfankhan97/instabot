@@ -7,8 +7,9 @@ def comment_user_post(insta_username):
     media_id = get_user_post(insta_username)
     print(media_id)
     message = raw_input("Enter ur comment....\n")
-    payload = {"access_token" : APP_ACCESS_TOKEN, "message":message}
+    payload = {"access_token" : APP_ACCESS_TOKEN, "text":message}
     request_url = (BASE_URL + "media/" + media_id + "/comments")
+    print(request_url)
     post_a_comment = requests.post(request_url,payload).json()
     print 'POST request url : %s' % (request_url)
 

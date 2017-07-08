@@ -26,13 +26,14 @@ while show_menu:
 
         elif menu_choice == 2:
             insta_username = raw_input("Enter Username.........\n")
-            comment_user_post(insta_username)
             print("wait work under process.......")
+            comment_user_post(insta_username)
             print("\n")
             print("\n")
         elif menu_choice == 3:
             print ("WAit Getting ur post.......\n")
             get_own_post()
+            print 'Your image has been downloaded!....to.....C:\Users\DELL\PycharmProjects\instabot...'
             print("\n")
             print("\n")
         elif menu_choice == 4:
@@ -46,7 +47,6 @@ while show_menu:
             insta_username = raw_input("Enter Username.........\n")
             print("Wait getting information.....")
             get_user_info(insta_username)
-
             print("\n")
             print("\n")
         else:
