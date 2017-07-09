@@ -15,5 +15,6 @@ It is created to make ur life simple with **Instabot**....Get access of **Instag
 1. **Get A comment...**
 2. **New theme added..with colourful display....**
 3. **Find Ur TAG popularity ON Instagram...**
+4. **Delete a comment...**
 
 ***MORE FEATURES COMING SOON......STAY TUNE>>>>>***

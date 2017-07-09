@@ -15,10 +15,12 @@ def comment_user_post(insta_username):
     if get_a_comment['meta']['code'] == 200:
         print(Fore.BLUE+Style.BRIGHT+"Here is your recent comment..\n")
         print(Fore.GREEN+Style.BRIGHT+">>> "+get_a_comment['data'][0]['text']+" <<<")
+        return(get_a_comment['data'][0]['id'])
 
         print (Style.RESET_ALL)
     else:
         print(Fore.RED+Style.BRIGHT+'not successful')
+
 
 
 #comment_user_post(insta_username="radhika12344")
