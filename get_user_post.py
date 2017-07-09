@@ -22,6 +22,7 @@ def get_user_post(insta_username):
             image_name = user_media['data'][0]['id'] + '.jpeg'
             image_url = user_media['data'][0]['images']['standard_resolution']['url']
             (urllib.urlretrieve(image_url, image_name))
+
             return user_media['data'][0]['id']
 
         else:

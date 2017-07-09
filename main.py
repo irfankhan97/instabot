@@ -7,13 +7,14 @@ import get_comment_post
 from colorama import init
 from colorama import Fore,Back,Style
 init()
+from trending import get_trending_tag_counts
 
 
 show_menu = True
 while show_menu:
     print(Fore.GREEN+Style.BRIGHT+'.....................Welcome ....TO......InstaBot..............')
     print(Fore.YELLOW+Style.BRIGHT+"\n...................MAke...... Your... Life.. Easy............\n\n")
-    menu_choices = Fore.CYAN+Style.BRIGHT+"What do you want to do? \n 1. Like A Post \n 2. Comment on a post \n 3. Download Own Post \n 4. Download Friend's post \n 5. Get Friend Info. \n 6. Get Friend's comments\n\n"
+    menu_choices = Fore.CYAN+Style.BRIGHT+"What do you want to do? \n 1. Like A Post \n 2. Comment on a post \n 3. Download Own Post \n 4. Download Friend's post \n 5. Get Friend Info. \n 6. Get Friend's comments\n 7. Count ur Tag\n\n"
     menu_choice = input(menu_choices)
 
 
@@ -63,6 +64,13 @@ while show_menu:
             print("\n"+Fore.GREEN+Style.BRIGHT+"Wait getting information.....\n")
             get_comment_post.comment_user_post(insta_username)
             print (Style.RESET_ALL)
+            print("\n")
+            print("\n")
+        if menu_choice == 7:
+            tag = raw_input(Fore.RED+Style.BRIGHT+"Enter Tagname.........\n")
+            print(Fore.GREEN+Style.BRIGHT+"Wait counting Ur Tags......")
+            get_trending_tag_counts(tag)
+            print(Style.RESET_ALL)
             print("\n")
             print("\n")
         else:
