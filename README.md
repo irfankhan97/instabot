@@ -11,7 +11,8 @@ it is created to make ur life simple with instabot
 3. u can download post
 4. u can get ur friend info.
 
-**New features:-**
-1. Get A comment.
+***New features:-***
+1. **Get A comment.**
+2. **New theme added..with colourful display.**
 
 ***MORE FEATURES COMING SOON......STAY TUNE>>>>>***
