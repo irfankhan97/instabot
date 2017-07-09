@@ -1,12 +1,13 @@
 import requests
 from constants import APP_ACCESS_TOKEN ,BASE_URL
 from get_user_post import get_user_post
-
+from colorama import *
+init()
 
 def comment_user_post(insta_username):
     media_id = get_user_post(insta_username)
  #   print(media_id)
-    message = raw_input("Enter ur comment....\n")
+    message = raw_input(Fore.YELLOW+Style.BRIGHT+"Enter ur comment....\n")
     payload = {"access_token" : APP_ACCESS_TOKEN, "text":message}
     request_url = (BASE_URL + "media/" + media_id + "/comments")
   #  print(request_url)
@@ -15,9 +16,9 @@ def comment_user_post(insta_username):
 
     #print(post_a_comment['meta']['code'])
     if post_a_comment['meta']['code'] == 200:
-        print("Post comment successfully")
+        print(Fore.GREEN+Style.BRIGHT+"Post comment successfully")
     else :
-        print('not successful')
+        print(Fore.RED+Style.BRIGHT+'not successful')
 
 #comment_user_post(insta_username="royal_khann")
 

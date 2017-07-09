@@ -1,6 +1,8 @@
 import requests
 from constants import *
 import urllib
+from colorama import *
+init()
 
 def get_own_post():
     request_url = (BASE_URL + 'users/self/media/recent/?access_token=%s') % (APP_ACCESS_TOKEN)
@@ -15,8 +17,8 @@ def get_own_post():
             print("\n\n")
 
         else:
-            print 'Post does not exist!'
+            print Fore.RED+Style.BRIGHT+'Post does not exist!'
     else:
-        print 'Status code other than 200 received!'
+        print Fore.RED+Style.BRIGHT+'Status code other than 200 received!'
 
 #get_own_post()

@@ -4,13 +4,16 @@ from get_user_post import get_user_post
 from get_own_post import get_own_post
 from get_user_info import get_user_info
 import get_comment_post
+from colorama import init
+from colorama import Fore,Back,Style
+init()
 
 
 show_menu = True
 while show_menu:
-    print('.....................Welcome ....TO......InstaBot..............')
-    print("\n...................MAke...... Your... Life.. Easy............\n\n")
-    menu_choices = "What do you want to do? \n 1. Like A Post \n 2. Comment on a post \n 3. Download Own Post \n 4. Download Friend's post \n 5. Get Friend Info. \n 6. Get Friend's comments\n\n"
+    print(Fore.GREEN+Style.BRIGHT+'.....................Welcome ....TO......InstaBot..............')
+    print(Fore.YELLOW+Style.BRIGHT+"\n...................MAke...... Your... Life.. Easy............\n\n")
+    menu_choices = Fore.CYAN+Style.BRIGHT+"What do you want to do? \n 1. Like A Post \n 2. Comment on a post \n 3. Download Own Post \n 4. Download Friend's post \n 5. Get Friend Info. \n 6. Get Friend's comments\n\n"
     menu_choice = input(menu_choices)
 
 
@@ -19,41 +22,47 @@ while show_menu:
         menu_choice = int(menu_choice)
 
         if menu_choice == 1:
-            insta_username = raw_input("Enter Username.........\n")
-            print("Wait liking Ur POst......")
+            insta_username = raw_input(Fore.RED+Style.BRIGHT+"Enter Username.........\n")
+            print(Fore.GREEN+Style.BRIGHT+"Wait liking Ur POst......")
             like_user_post(insta_username)
+            print(Style.RESET_ALL)
             print("\n")
             print("\n")
 
         elif menu_choice == 2:
-            insta_username = raw_input("Enter Username.........\n")
-            print("wait work under process.......")
+            insta_username = raw_input(Fore.RED+Style.BRIGHT+"Enter Username.........\n")
+            print(Fore.GREEN+Style.BRIGHT+"wait work under process.......")
             comment_user_post(insta_username)
+            print (Style.RESET_ALL)
             print("\n")
             print("\n")
         elif menu_choice == 3:
-            print ("WAit Getting ur post.......\n")
+            print (Fore.GREEN+Style.BRIGHT+"WAit Getting ur post.......\n")
             get_own_post()
             print 'Your image has been downloaded!....to.....C:\Users\DELL\PycharmProjects\instabot...'
+            print (Style.RESET_ALL)
             print("\n")
             print("\n")
         elif menu_choice == 4:
-            insta_username = raw_input("Enter Username.........\n")
-            print("Wait Downloading user post......")
+            insta_username = raw_input(Fore.RED+Style.BRIGHT+"Enter Username.........\n")
+            print(Fore.GREEN+Style.BRIGHT+"Wait Downloading user post......")
             get_user_post(insta_username)
-
+            print (Style.RESET_ALL)
             print("\n")
             print("\n")
         elif menu_choice == 5:
-            insta_username = raw_input("Enter Username.........\n")
-            print("Wait getting information.....")
+            insta_username = raw_input(Fore.RED+Style.BRIGHT+"Enter Username.........\n")
+            print(Fore.GREEN+Style.BRIGHT+"Wait getting information.....")
             get_user_info(insta_username)
+            print 'Your image has been downloaded!....to.....C:\Users\DELL\PycharmProjects\instabot...'
+            print (Style.RESET_ALL)
             print("\n")
             print("\n")
         elif menu_choice == 6:
-            insta_username = raw_input("Enter Username.........\n")
-            print("Wait getting information.....")
+            insta_username = raw_input(Fore.RED+Style.BRIGHT+"Enter Username.........\n")
+            print("\n"+Fore.GREEN+Style.BRIGHT+"Wait getting information.....\n")
             get_comment_post.comment_user_post(insta_username)
+            print (Style.RESET_ALL)
             print("\n")
             print("\n")
         else:

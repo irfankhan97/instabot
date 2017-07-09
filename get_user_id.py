@@ -1,6 +1,7 @@
 import requests
 from constants import *
-
+from colorama import *
+init()
 
 def get_user_id(insta_username):
     #function logic
@@ -13,5 +14,5 @@ def get_user_id(insta_username):
         else:
             return None
     else:
-        print 'Status code other than 200 received!'
+        print Fore.RED+Style.BRIGHT+'Status code other than 200 received!'
         exit()

@@ -1,6 +1,8 @@
 import requests
 from constants import *
 from get_user_id import *
+from colorama import *
+init()
 
 
 def get_user_info(insta_username):
@@ -19,7 +21,7 @@ def get_user_info(insta_username):
             print '\nNo. of people you are following: %s' % (user_info['data']['counts']['follows'])
             print '\nNo. of posts: %s' % (user_info['data']['counts']['media'])
         else:
-            print 'There is no data for this user!'
+            print Fore.RED+Style.BRIGHT+'There is no data for this user!'
     else:
-        print 'Status code other than 200 received!'
+        print Fore.RED+Style.BRIGHT+'Status code other than 200 received!'
 #get_user_info(insta_username="radhika12344")
