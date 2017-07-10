@@ -42,7 +42,7 @@ while show_menu:
         elif menu_choice == 3:
             print (Fore.GREEN+Style.BRIGHT+"WAit Getting ur post.......\n")
             get_own_post()
-            print 'Your image has been downloaded!....to.....C:\Users\DELL\PycharmProjects\instabot...'
+            print 'Your image has been downloaded!....to.....C:\Users\DELL\PycharmProjects\instabot\\'
             print (Style.RESET_ALL)
             print("\n")
             print("\n")
@@ -50,6 +50,7 @@ while show_menu:
             insta_username = raw_input(Fore.RED+Style.BRIGHT+"Enter Username.........\n")
             print(Fore.GREEN+Style.BRIGHT+"Wait Downloading user post......")
             get_user_post(insta_username)
+            print 'Your image has been downloaded!....to.....C:\Users\DELL\PycharmProjects\instabot\\'
             print (Style.RESET_ALL)
             print("\n")
             print("\n")
@@ -57,7 +58,7 @@ while show_menu:
             insta_username = raw_input(Fore.RED+Style.BRIGHT+"Enter Username.........\n")
             print(Fore.GREEN+Style.BRIGHT+"Wait getting information.....")
             get_user_info(insta_username)
-            print 'Your image has been downloaded!....to.....C:\Users\DELL\PycharmProjects\instabot...'
+
             print (Style.RESET_ALL)
             print("\n")
             print("\n")

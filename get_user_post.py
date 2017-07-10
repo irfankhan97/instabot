@@ -5,6 +5,7 @@ from constants import *
 import json
 from colorama import *
 init()
+from PIL import Image
 
 def get_user_post(insta_username):
     user_id = get_user_id(insta_username)
@@ -22,8 +23,12 @@ def get_user_post(insta_username):
             image_name = user_media['data'][0]['id'] + '.jpeg'
             image_url = user_media['data'][0]['images']['standard_resolution']['url']
             (urllib.urlretrieve(image_url, image_name))
+            image = "C:\Users\DELL\PycharmProjects\instabot\\"+image_name
+            img = Image.open(image)
+            img.show()
 
             return user_media['data'][0]['id']
+
 
         else:
             print Fore.GREEN+Style.BRIGHT+'Post does not exist!'
