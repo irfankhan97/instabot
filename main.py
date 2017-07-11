@@ -50,6 +50,7 @@ while show_menu:
             insta_username = raw_input(Fore.RED+Style.BRIGHT+"Enter Username.........\n")
             print(Fore.GREEN+Style.BRIGHT+"Wait Downloading user post......")
             get_user_post(insta_username)
+            print get_user_post.user_id['data'][0['id']]
             print 'Your image has been downloaded!....to.....C:\Users\DELL\PycharmProjects\instabot\\'
             print (Style.RESET_ALL)
             print("\n")
@@ -58,7 +59,6 @@ while show_menu:
             insta_username = raw_input(Fore.RED+Style.BRIGHT+"Enter Username.........\n")
             print(Fore.GREEN+Style.BRIGHT+"Wait getting information.....")
             get_user_info(insta_username)
-
             print (Style.RESET_ALL)
             print("\n")
             print("\n")

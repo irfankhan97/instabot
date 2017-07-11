@@ -12,16 +12,21 @@ def get_trending_tag_counts(tag):
     #  message = raw_input("Enter ur comment....\n")
     # payload = {"access_token" : APP_ACCESS_TOKEN, "message":message}
     request_url = (BASE_URL + "tags/" + tag + "?access_token=" + APP_ACCESS_TOKEN)
-    get_a_comment = requests.get(request_url).json()
-    if get_a_comment['meta']['code'] == 200:
+    get_a_trend = requests.get(request_url).json()
+    (trends) = get_a_trend['data']['media_count']
+    if get_a_trend['meta']['code'] == 200:
         print(Fore.CYAN+Style.BRIGHT+"Here is your tag...Popularity\n")
-        print(Fore.GREEN+Style.BRIGHT+">>> "+str(get_a_comment['data']['media_count'])+" <<<")
-        plt.plot(get_a_comment['data']['media_count'], 'ro')
+        print(Fore.GREEN+Style.BRIGHT+">>> "+str(get_a_trend['data']['media_count'])+" <<<")
+        plt.plot(get_a_trend['data']['media_count'], 'ro')
         plt.axis()
         plt.ylabel('Trending----->')
         plt.xlabel("Insta-Bot")
+        plt.title("TRENDING GRAPH")
+        #plt._auto_draw_if_interactive()
         plt.show()
         print (Style.RESET_ALL)
+        return (get_a_trend['data']['media_count'])
     else:
         print(Fore.RED+Style.BRIGHT+'not successful')
 
+#get_trending_tag_counts(tag="love")
